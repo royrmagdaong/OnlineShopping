@@ -49,30 +49,36 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
         holder.product_name.setText(cartItem.getProductName());
         //holder.price.setText(cartItem.getPrice());
-        if (cartItem.getPrice().equals("prod_a")){
-            holder.product_img.setImageResource(R.drawable.prod_a);
-        }else if(cartItem.getPrice().equals("prod_b")){
-            holder.product_img.setImageResource(R.drawable.prod_b);
-        }else if(cartItem.getPrice().equals("prod_c")){
-            holder.product_img.setImageResource(R.drawable.prod_c);
-        }else if(cartItem.getPrice().equals("prod_d")){
-            holder.product_img.setImageResource(R.drawable.prod_d);
-        }else if(cartItem.getPrice().equals("prod_e")){
-            holder.product_img.setImageResource(R.drawable.prod_e);
-        }else if(cartItem.getPrice().equals("prod_f")){
-            holder.product_img.setImageResource(R.drawable.prod_f);
-        }else if(cartItem.getPrice().equals("prod_aa")){
-            holder.product_img.setImageResource(R.drawable.prod_aa);
-        }else if(cartItem.getPrice().equals("prod_bb")){
-            holder.product_img.setImageResource(R.drawable.prod_bb);
-        }else if(cartItem.getPrice().equals("prod_cc")){
-            holder.product_img.setImageResource(R.drawable.prod_cc);
-        }else if(cartItem.getPrice().equals("prod_dd")){
-            holder.product_img.setImageResource(R.drawable.prod_dd);
-        }else if(cartItem.getPrice().equals("prod_ee")){
-            holder.product_img.setImageResource(R.drawable.prod_ee);
-        }else if(cartItem.getPrice().equals("prod_ff")){
-            holder.product_img.setImageResource(R.drawable.prod_ff);
+        if (cartItem.getPrice().equals("bagnet_sm")){
+            holder.product_img.setImageResource(R.drawable.bagnet_sm);
+        }else if(cartItem.getPrice().equals("biko_bulacan_sm")){
+            holder.product_img.setImageResource(R.drawable.biko_bulacan_sm);
+        }else if(cartItem.getPrice().equals("cashey_nuts_bataan_sm")){
+            holder.product_img.setImageResource(R.drawable.cashey_nuts_bataan_sm);
+        }else if(cartItem.getPrice().equals("hopya_ibanag_sm")){
+            holder.product_img.setImageResource(R.drawable.hopya_ibanag_sm);
+        }else if(cartItem.getPrice().equals("ilocos_bagoong_sm")){
+            holder.product_img.setImageResource(R.drawable.ilocos_bagoong_sm);
+        }else if(cartItem.getPrice().equals("inatata_isabela_sm")){
+            holder.product_img.setImageResource(R.drawable.inatata_isabela_sm);
+        }else if(cartItem.getPrice().equals("isabela_binalay_sm")){
+            holder.product_img.setImageResource(R.drawable.isabela_binalay_sm);
+        }else if(cartItem.getPrice().equals("longganisa_batotay_sm")){
+            holder.product_img.setImageResource(R.drawable.longganisa_batotay_sm);
+        }else if(cartItem.getPrice().equals("abel_weaving_sm")){
+            holder.product_img.setImageResource(R.drawable.abel_weaving_sm);
+        }else if(cartItem.getPrice().equals("manga_zambales_2_sm")){
+            holder.product_img.setImageResource(R.drawable.manga_zambales_2_sm);
+        }else if(cartItem.getPrice().equals("moriecos_isabela_sm")){
+            holder.product_img.setImageResource(R.drawable.moriecos_isabela_sm);
+        }else if(cartItem.getPrice().equals("muscovado_sugar_tarlac_sm")){
+            holder.product_img.setImageResource(R.drawable.muscovado_sugar_tarlac_sm);
+        }else if(cartItem.getPrice().equals("sukang_iloco_sm")){
+            holder.product_img.setImageResource(R.drawable.sukang_iloco_sm);
+        }else if(cartItem.getPrice().equals("romana_peanut_brittle_sm")){
+            holder.product_img.setImageResource(R.drawable.romana_peanut_brittle_sm);
+        }else if(cartItem.getPrice().equals("vigan_longganisa_sm")){
+            holder.product_img.setImageResource(R.drawable.vigan_longganisa_sm);
         }
 
         holder.total_price.setText(cartItem.getTotalPrice());

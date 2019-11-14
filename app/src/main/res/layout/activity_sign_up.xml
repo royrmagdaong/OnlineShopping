@@ -26,25 +26,16 @@
             android:padding="16dp"
             />
 
+
         <EditText
+            android:id="@+id/emailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="EMAIL ADDRESS"
+            android:hint="EMAIL"
             android:layout_marginBottom="8dp"
             />
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="NAME"
-            android:layout_marginBottom="8dp"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="LASTNAME"
-            android:layout_marginBottom="8dp"
-            />
-        <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="PASSWORD"
@@ -52,6 +43,7 @@
             android:layout_marginBottom="8dp"
             />
         <EditText
+            android:id="@+id/repeatPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="REPEAT PASSWORD"
@@ -94,11 +86,47 @@
 
         </RelativeLayout>
 
+        <!--<Button-->
+            <!--android:id="@+id/btnUpload"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Upload"-->
+            <!--/>-->
 
-
-
+        <!--<ImageView-->
+            <!--android:id="@+id/img_profile"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp" />-->
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:id="@+id/blurred_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33FF0000"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="invisible"
+        android:outlineAmbientShadowColor="@color/lightGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

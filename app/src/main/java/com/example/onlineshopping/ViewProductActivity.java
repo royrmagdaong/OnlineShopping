@@ -1,5 +1,6 @@
 package com.example.onlineshopping;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,6 +19,8 @@ import com.example.onlineshopping.Fragments.HomeFragment;
 import com.example.onlineshopping.Models.CartItem;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class ViewProductActivity extends AppCompatActivity {
 
@@ -26,6 +29,9 @@ public class ViewProductActivity extends AppCompatActivity {
     FloatingActionButton btnCart;
 
     CollapsingToolbarLayout collapsingToolbarLayout;
+
+    //firebase
+    FirebaseUser currentUser;
 
 
     String img;
@@ -47,40 +53,46 @@ public class ViewProductActivity extends AppCompatActivity {
         product_name = findViewById(R.id.product_name);
         btnCart = findViewById(R.id.btnCart);
 
-
-
         getDataThroughIntent();
         addToCart();
+
     }
+
 
     private void getDataThroughIntent(){
         Intent intent = getIntent();
         product_name.setText(intent.getStringExtra(HomeFragment.product_name));
         img = intent.getStringExtra(HomeFragment.product_img);
-        if (intent.getStringExtra(HomeFragment.product_img).equals("prod_a")){
-            product_img.setImageResource(R.drawable.prod_a);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_b")){
-            product_img.setImageResource(R.drawable.prod_b);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_c")){
-            product_img.setImageResource(R.drawable.prod_c);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_d")){
-            product_img.setImageResource(R.drawable.prod_d);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_e")){
-            product_img.setImageResource(R.drawable.prod_e);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_f")){
-            product_img.setImageResource(R.drawable.prod_f);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_aa")){
-            product_img.setImageResource(R.drawable.prod_aa);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_bb")){
-            product_img.setImageResource(R.drawable.prod_bb);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_cc")){
-            product_img.setImageResource(R.drawable.prod_cc);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_dd")){
-            product_img.setImageResource(R.drawable.prod_dd);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_ee")){
-            product_img.setImageResource(R.drawable.prod_ee);
-        }else if(intent.getStringExtra(HomeFragment.product_img).equals("prod_ff")){
-            product_img.setImageResource(R.drawable.prod_ff);
+        if (intent.getStringExtra(HomeFragment.product_img).equals("bagnet_sm")){
+            product_img.setImageResource(R.drawable.bagnet);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("biko_bulacan_sm")){
+            product_img.setImageResource(R.drawable.biko_bulacan);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("cashey_nuts_bataan_sm")){
+            product_img.setImageResource(R.drawable.cashey_nuts_bataan);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("hopya_ibanag_sm")){
+            product_img.setImageResource(R.drawable.hopya_ibanag);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("ilocos_bagoong_sm")){
+            product_img.setImageResource(R.drawable.ilocos_bagoong);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("inatata_isabela_sm")){
+            product_img.setImageResource(R.drawable.inatata_isabela);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("isabela_binalay_sm")){
+            product_img.setImageResource(R.drawable.isabela_binalay);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("longganisa_batotay_sm")){
+            product_img.setImageResource(R.drawable.longganisa_batotay);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("abel_weaving_sm")){
+            product_img.setImageResource(R.drawable.abel_weaving);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("manga_zambales_2_sm")){
+            product_img.setImageResource(R.drawable.manga_zambales_2);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("moriecos_isabela_sm")){
+            product_img.setImageResource(R.drawable.moriecos_isabela);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("muscovado_sugar_tarlac_sm")){
+            product_img.setImageResource(R.drawable.muscovado_sugar_tarlac);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("sukang_iloco_sm")){
+            product_img.setImageResource(R.drawable.sukang_iloco);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("romana_peanut_brittle_sm")){
+            product_img.setImageResource(R.drawable.romana_peanut_brittle);
+        }else if(intent.getStringExtra(HomeFragment.product_img).equals("vigan_longganisa_sm")){
+            product_img.setImageResource(R.drawable.vigan_longganisa);
         }
     }
 
@@ -88,23 +100,29 @@ public class ViewProductActivity extends AppCompatActivity {
         btnCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(ViewProductActivity.this,R.style.myDialog)); //alert for confirm to delete
-                builder.setMessage("Do you want to add this item to your cart?");    //set message
+                currentUser = FirebaseAuth.getInstance().getCurrentUser();
+                if (currentUser!=null){
+                    //Toast.makeText(ViewProductActivity.this, "not null", Toast.LENGTH_SHORT).show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(ViewProductActivity.this,R.style.myDialog)); //alert for confirm to delete
+                    builder.setMessage("Do you want to add this item to your cart?");    //set message
 
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() { //when click on DELETE
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        StaticArrayList.cartItems.add(new CartItem(product_name.getText().toString(),img,"",1));
-                        Toast.makeText(ViewProductActivity.this, "added to cart successfully", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                }).setNegativeButton("No", new DialogInterface.OnClickListener() {  //not removing items if cancel is done
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() { //when click on DELETE
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            StaticArrayList.cartItems.add(new CartItem(product_name.getText().toString(),img,"",1));
+                            Toast.makeText(ViewProductActivity.this, "added to cart successfully", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+                    }).setNegativeButton("No", new DialogInterface.OnClickListener() {  //not removing items if cancel is done
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
 
-                        return;
-                    }
-                }).show();  //show alert dialog
+                            return;
+                        }
+                    }).show();  //show alert dialog
+                }else{
+                    startActivity(new Intent(ViewProductActivity.this,LoginActivity.class));
+                }
 
             }
         });

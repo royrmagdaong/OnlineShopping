@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#831B18</color>
     <color name="colorAccent">#fff200</color>
 
-    <color name="lightGrey">#eee</color>
-
+    <color name="lightGrey">#DDDCDC</color>
+    <color name="title">#949292</color>
 
 </resources>

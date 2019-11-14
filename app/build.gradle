@@ -28,8 +28,22 @@ dependencies {
     // CIRCLE IMAGE
     implementation 'de.hdodenhof:circleimageview:3.0.1'
 
+    //firebase auth
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    //google sign in
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    //phone number sign in
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    //firebase storage
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+
+
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+apply plugin: 'com.google.gms.google-services'

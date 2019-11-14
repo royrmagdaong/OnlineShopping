@@ -13,6 +13,22 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="BANNER"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@android:color/white"
@@ -21,8 +37,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Category"
-                android:textSize="22sp"
-                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textColor="@color/title"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
                 android:textStyle="bold"
@@ -52,17 +68,18 @@
                             android:orientation="vertical"
                             android:padding="8dp"
                             >
+
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/fb_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:layout_margin="4dp"
-                                />
+                                android:src="@drawable/mens_apparel" />
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="CATEGORY NAME"
-                                android:textColor="@android:color/black"
+                                android:text="Beverages"
+                                android:gravity="center"
+                                android:textColor="@color/title"
                                 />
                         </LinearLayout>
 
@@ -73,16 +90,17 @@
                             android:padding="8dp"
                             >
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/fb_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/womens_apparel"
                                 android:layout_margin="4dp"
                                 />
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="CATEGORY NAME"
-                                android:textColor="@android:color/black"
+                                android:text="Condiments"
+                                android:gravity="center"
+                                android:textColor="@color/title"
                                 />
                         </LinearLayout>
                     </LinearLayout>
@@ -99,16 +117,17 @@
                             android:padding="8dp"
                             >
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/fb_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/watch"
                                 android:layout_margin="4dp"
                                 />
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="CATEGORY NAME"
-                                android:textColor="@android:color/black"
+                                android:text="Delicacies"
+                                android:gravity="center"
+                                android:textColor="@color/title"
                                 />
                         </LinearLayout>
 
@@ -119,16 +138,17 @@
                             android:padding="8dp"
                             >
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/fb_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/women_accessory"
                                 android:layout_margin="4dp"
                                 />
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="CATEGORY NAME"
-                                android:textColor="@android:color/black"
+                                android:text="Fish"
+                                android:gravity="center"
+                                android:textColor="@color/title"
                                 />
                         </LinearLayout>
                     </LinearLayout>
@@ -145,16 +165,17 @@
                             android:padding="8dp"
                             >
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/fb_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/men_bag"
                                 android:layout_margin="4dp"
                                 />
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="CATEGORY NAME"
-                                android:textColor="@android:color/black"
+                                android:text="Meat"
+                                android:gravity="center"
+                                android:textColor="@color/title"
                                 />
                         </LinearLayout>
 
@@ -165,16 +186,17 @@
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
                                 android:layout_margin="4dp"
-                                android:src="@drawable/fb_icon" />
+                                android:src="@drawable/women_bag" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="CATEGORY NAME"
-                                android:textColor="@android:color/black"
+                                android:text="Processed food"
+                                android:gravity="center"
+                                android:textColor="@color/title"
                                 />
                         </LinearLayout>
                     </LinearLayout>
@@ -191,16 +213,17 @@
                             android:padding="8dp"
                             >
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/fb_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/men_shoes"
                                 android:layout_margin="4dp"
                                 />
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="CATEGORY NAME"
-                                android:textColor="@android:color/black"
+                                android:text="Accessories"
+                                android:gravity="center"
+                                android:textColor="@color/title"
                                 />
                         </LinearLayout>
 
@@ -211,16 +234,161 @@
                             android:padding="8dp"
                             >
                             <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:src="@drawable/fb_icon"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/women_shoes"
                                 android:layout_margin="4dp"
                                 />
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="CATEGORY NAME"
-                                android:textColor="@android:color/black"
+                                android:text="Garments"
+                                android:gravity="center"
+                                android:textColor="@color/title"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            >
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/men_shoes"
+                                android:layout_margin="4dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Accessories"
+                                android:gravity="center"
+                                android:textColor="@color/title"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            >
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/women_shoes"
+                                android:layout_margin="4dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Garments"
+                                android:gravity="center"
+                                android:textColor="@color/title"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            >
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/men_shoes"
+                                android:layout_margin="4dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Accessories"
+                                android:gravity="center"
+                                android:textColor="@color/title"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            >
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/women_shoes"
+                                android:layout_margin="4dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Garments"
+                                android:gravity="center"
+                                android:textColor="@color/title"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp"
+                        >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            >
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/men_shoes"
+                                android:layout_margin="4dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Accessories"
+                                android:gravity="center"
+                                android:textColor="@color/title"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            >
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/women_shoes"
+                                android:layout_margin="4dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Garments"
+                                android:gravity="center"
+                                android:textColor="@color/title"
                                 />
                         </LinearLayout>
                     </LinearLayout>
@@ -232,17 +400,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:background="@android:color/white"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Top Products"
-                android:textSize="22sp"
+                android:textSize="16sp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/title"
                 android:textStyle="bold"
                 />
             <HorizontalScrollView
@@ -263,23 +431,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/top_prod_1_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_a"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/bagnet_sm"
+                            android:tag="bagnet_sm"
+                            />
+                        <TextView
+                            android:id="@+id/top_prod_1_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/top_prod_1_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 1"
-                            android:textSize="18sp"
+                            android:text="Bagnet"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -288,23 +468,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/top_prod_2_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_b"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/hopya_ibanag_sm"
+                            android:tag="hopya_ibanag_sm"
+                            />
+                        <TextView
+                            android:id="@+id/top_prod_2_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/top_prod_2_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 2"
-                            android:textSize="18sp"
+                            android:text="Hopya Ibanag"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -313,23 +505,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/top_prod_3_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_c"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/sukang_iloco_sm"
+                            android:tag="sukang_iloco_sm"
+                            />
+                        <TextView
+                            android:id="@+id/top_prod_3_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/top_prod_3_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 3"
-                            android:textSize="18sp"
+                            android:text="Sukang Iloko"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -338,23 +542,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/top_prod_4_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_d"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/romana_peanut_brittle_sm"
+                            android:tag="romana_peanut_brittle_sm"
+                            />
+                        <TextView
+                            android:id="@+id/top_prod_4_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/top_prod_4_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 4"
-                            android:textSize="18sp"
+                            android:text="Romana Peanut Brittle"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -363,23 +579,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/top_prod_5_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_e"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/moriecos_isabela_sm"
+                            android:tag="moriecos_isabela_sm"
+                            />
+                        <TextView
+                            android:id="@+id/top_prod_5_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/top_prod_5_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 5"
-                            android:textSize="18sp"
+                            android:text="Moriecos"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -388,23 +616,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/top_prod_6_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_f"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/vigan_longganisa_sm"
+                            android:tag="vigan_longganisa_sm"
+                            />
+                        <TextView
+                            android:id="@+id/top_prod_6_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/top_prod_6_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 6"
-                            android:textSize="18sp"
+                            android:text="Vigan Longganisa"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -416,17 +656,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:background="@android:color/white"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hot Products"
-                android:textSize="22sp"
+                android:textSize="16sp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/title"
                 android:textStyle="bold"
                 />
             <HorizontalScrollView
@@ -447,23 +687,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/hot_prod_1_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_aa"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/abel_weaving_sm"
+                            android:tag="abel_weaving_sm"
+                            />
+                        <TextView
+                            android:id="@+id/hot_prod_1_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/hot_prod_1_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 1"
-                            android:textSize="18sp"
+                            android:text="Abel Weaving"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -472,23 +724,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/hot_prod_2_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_bb"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/isabela_binalay_sm"
+                            android:tag="isabela_binalay_sm"
+                            />
+                        <TextView
+                            android:id="@+id/hot_prod_2_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/hot_prod_2_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 2"
-                            android:textSize="18sp"
+                            android:text="Binalay"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -497,23 +761,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/hot_prod_3_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_cc"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/moriecos_isabela_sm"
+                            android:tag="moriecos_isabela_sm"
+                            />
+                        <TextView
+                            android:id="@+id/hot_prod_3_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/hot_prod_3_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 3"
-                            android:textSize="18sp"
+                            android:text="Moriecos"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -522,23 +798,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/hot_prod_4_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_dd"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/romana_peanut_brittle_sm"
+                            android:tag="romana_peanut_brittle_sm"
+                            />
+                        <TextView
+                            android:id="@+id/hot_prod_4_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/hot_prod_4_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 4"
-                            android:textSize="18sp"
+                            android:text="Romana Peanut Brittle"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -547,23 +835,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/hot_prod_5_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_ee"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/sukang_iloco_sm"
+                            android:tag="sukang_iloco_sm"
+                            />
+                        <TextView
+                            android:id="@+id/hot_prod_5_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/hot_prod_5_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 5"
-                            android:textSize="18sp"
+                            android:text="Sukang Iloko"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -572,23 +872,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_margin="8dp"
-                        android:padding="4dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingBottom="4dp"
                         >
                         <ImageView
                             android:id="@+id/hot_prod_6_img"
-                            android:layout_width="180dp"
-                            android:layout_height="180dp"
-                            android:src="@drawable/prod_ff"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/hopya_ibanag_sm"
+                            android:tag="hopya_ibanag_sm"
+                            />
+                        <TextView
+                            android:id="@+id/hot_prod_6_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="525.0"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
                             />
                         <TextView
                             android:id="@+id/hot_prod_6_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Product 6"
-                            android:textSize="18sp"
+                            android:text="Hopyang Ibanag"
+                            android:textSize="14sp"
                             android:gravity="center"
-                            android:textColor="@android:color/black"
+                            android:textColor="@color/title"
                             />
                     </LinearLayout>
 
@@ -600,18 +912,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:background="@android:color/white"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Daily Discover"
-                android:textSize="22sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/title"
                 />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/dailyDiscoverRecyclerView"

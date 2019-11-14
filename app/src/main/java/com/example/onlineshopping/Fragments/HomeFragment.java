@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -21,13 +20,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.onlineshopping.Constants.StaticArrayList;
 import com.example.onlineshopping.Models.DailyDiscoverItem;
-import com.example.onlineshopping.Models.ShopCategoryItem;
 import com.example.onlineshopping.R;
 import com.example.onlineshopping.RecyclerAdapter.DailyDiscoverRecyclerAdapter;
-import com.example.onlineshopping.RecyclerAdapter.ShopCategoryRecyclerAdapter;
 import com.example.onlineshopping.ViewProductActivity;
-
-import java.util.ArrayList;
 
 
 public class HomeFragment extends Fragment {
@@ -111,7 +106,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, top_prod_name1.getText().toString());
-                intent.putExtra(product_img, "prod_a");
+                intent.putExtra(product_img, (String) top_prod_img1.getTag());
                 startActivity(intent);
             }
         });
@@ -120,7 +115,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, top_prod_name2.getText().toString());
-                intent.putExtra(product_img, "prod_b");
+                intent.putExtra(product_img, (String) top_prod_img2.getTag());
                 startActivity(intent);
             }
         });
@@ -129,7 +124,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, top_prod_name3.getText().toString());
-                intent.putExtra(product_img, "prod_c");
+                intent.putExtra(product_img, (String) top_prod_img3.getTag());
                 startActivity(intent);
             }
         });
@@ -138,7 +133,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, top_prod_name4.getText().toString());
-                intent.putExtra(product_img, "prod_d");
+                intent.putExtra(product_img, (String) top_prod_img4.getTag());
                 startActivity(intent);
             }
         });
@@ -147,7 +142,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, top_prod_name5.getText().toString());
-                intent.putExtra(product_img, "prod_e");
+                intent.putExtra(product_img, (String) top_prod_img5.getTag());
                 startActivity(intent);
             }
         });
@@ -156,7 +151,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, top_prod_name6.getText().toString());
-                intent.putExtra(product_img, "prod_f");
+                intent.putExtra(product_img, (String) top_prod_img6.getTag());
                 startActivity(intent);
             }
         });
@@ -168,7 +163,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, hot_prod_1_name.getText().toString());
-                intent.putExtra(product_img, "prod_aa");
+                intent.putExtra(product_img, (String) hot_prod_1_img.getTag());
                 startActivity(intent);
             }
         });
@@ -177,7 +172,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, hot_prod_2_name.getText().toString());
-                intent.putExtra(product_img, "prod_bb");
+                intent.putExtra(product_img, (String) hot_prod_2_img.getTag());
                 startActivity(intent);
             }
         });
@@ -186,7 +181,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, hot_prod_3_name.getText().toString());
-                intent.putExtra(product_img, "prod_cc");
+                intent.putExtra(product_img, (String) hot_prod_3_img.getTag());
                 startActivity(intent);
             }
         });
@@ -195,7 +190,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, hot_prod_4_name.getText().toString());
-                intent.putExtra(product_img, "prod_dd");
+                intent.putExtra(product_img, (String) hot_prod_4_img.getTag());
                 startActivity(intent);
             }
         });
@@ -204,7 +199,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, hot_prod_5_name.getText().toString());
-                intent.putExtra(product_img, "prod_ee");
+                intent.putExtra(product_img, (String) hot_prod_5_img.getTag());
                 startActivity(intent);
             }
         });
@@ -213,7 +208,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ViewProductActivity.class);
                 intent.putExtra(product_name, hot_prod_6_name.getText().toString());
-                intent.putExtra(product_img, "prod_ff");
+                intent.putExtra(product_img, (String) hot_prod_6_img.getTag());
                 startActivity(intent);
             }
         });
@@ -225,6 +220,8 @@ public class HomeFragment extends Fragment {
         dailyDiscoverRecyclerView.setAdapter(dailyDiscoverRecyclerAdapter);
         dailyDiscoverRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),2));
 
+
+        // Add item to recyclerview trigger by reaching the bottom of scrollview
         scrollView.getViewTreeObserver()
                 .addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
                     @Override
@@ -232,14 +229,18 @@ public class HomeFragment extends Fragment {
                         if (scrollView.getChildAt(0).getBottom()
                                 <= (scrollView.getHeight() + scrollView.getScrollY())) {
                             //scroll view is at bottom
-                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Product 1","prod_a"));
-                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Product 2","prod_e"));
-                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Product 3","prod_bb"));
-                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Product 4","prod_d"));
-                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Product 1","prod_a"));
-                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Product 2","prod_e"));
-                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Product 3","prod_bb"));
-                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Product 4","prod_d"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Bagnet","bagnet_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Bico Bulacan","biko_bulacan_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Cashey Nuts(Kasoy) Bataan","cashey_nuts_bataan_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Hopya Ibanag","hopya_ibanag_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Bagoong Ilocos","ilocos_bagoong_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Inatata Isabela","inatata_isabela_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Binalay Isabela","isabela_binalay_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Batotay Longganisa","longganisa_batotay_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Abel Weaving","abel_weaving_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Manga Zambales","manga_zambales_2_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Moriecos","moriecos_isabela_sm","525.0"));
+                            StaticArrayList.dailyDiscoverItems.add(new DailyDiscoverItem("Muscovado","muscovado_sugar_tarlac_sm","525.0"));
 
                             dailyDiscoverRecyclerAdapter.notifyDataSetChanged();
                         } else {
